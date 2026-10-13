@@ -3,10 +3,10 @@
     "metadata": {
       "id": "brazilian-releases-regex.template",
       "name": "Brazilian Releases Regex",
-      "description": "PT-BR-focused variant based on Vidhin05/Releases-Regex and group data from TRaSH Guides PT-BR.\n\nUses English scoring as a base, adds Brazilian-related group/tag detection, and applies a penalty to the source's explicitly bad group list.\n\nThe source group pool does not define quality sub-tiers; no tiers are inferred from list order.\n\nRequires Stream Expression Score in sort order.",
+      "description": "PT-BR-focused variant of Releases-Regex, using English scoring as a base and group data from TRaSH Guides PT-BR. Recognizes Brazilian release groups and PT-BR tags. This initial version does not infer quality tiers from group list order. Requires Stream Expression Score in sort order.",
       "source": "external",
-      "author": "Brazilian Releases Regex contributors",
-      "version": "0.1.0",
+      "author": "robertmenezes",
+      "version": "0.1.1",
       "category": "Regex",
       "services": [],
       "serviceRequired": false,
@@ -92,7 +92,7 @@
           "socials": [
             {
               "id": "github",
-              "url": "https://github.com/Vidhin05/Releases-Regex"
+              "url": "https://github.com/robertmenezes/releases-regex-ptbr"
             },
             {
               "id": "ko-fi",
