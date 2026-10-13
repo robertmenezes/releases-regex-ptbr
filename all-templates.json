@@ -6,7 +6,7 @@
       "description": "PT-BR-focused variant of Releases-Regex, using English scoring as a base and group data from TRaSH Guides PT-BR. Recognizes Brazilian release groups and PT-BR tags. This initial version does not infer quality tiers from group list order. Requires Stream Expression Score in sort order.",
       "source": "external",
       "author": "robertmenezes",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "Regex",
       "services": [],
       "serviceRequired": false,
