@@ -135,14 +135,17 @@ export function updateTemplateForBrazilian(templateList, rawBaseUrl) {
 
   template.metadata.id = "brazilian-releases-regex.template";
   template.metadata.name = "Brazilian Releases Regex";
-  template.metadata.author = "Brazilian Releases Regex contributors";
-  template.metadata.version = "0.1.0";
-  template.metadata.description = [
-    "PT-BR-focused variant based on Vidhin05/Releases-Regex and group data from TRaSH Guides PT-BR.",
-    "Uses English scoring as a base, adds Brazilian-related group/tag detection, and applies a penalty to the source's explicitly bad group list.",
-    "The source group pool does not define quality sub-tiers; no tiers are inferred from list order.",
-    "Requires Stream Expression Score in sort order.",
-  ].join("\n\n");
+  template.metadata.author = "robertmenezes";
+  template.metadata.version = "0.1.1";
+  template.metadata.description = "PT-BR-focused variant of Releases-Regex, using English scoring as a base and group data from TRaSH Guides PT-BR. Recognizes Brazilian release groups and PT-BR tags. This initial version does not infer quality tiers from group list order. Requires Stream Expression Score in sort order.";
+
+  const creditsInput = template.metadata.inputs?.find((item) => item.id === "credits");
+  if (creditsInput) {
+    creditsInput.socials = [
+      { id: "github", url: "https://github.com/robertmenezes/releases-regex-ptbr" },
+      { id: "github-upstream", url: "https://github.com/Vidhin05/Releases-Regex" },
+    ];
+  }
 
   const variantInput = template.metadata.inputs?.find((item) => item.id === "variant");
   if (!variantInput) throw new Error("Could not find the template's variant input.");
