@@ -1,0 +1,14 @@
+{
+  "name": "brazilian-releases-regex-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Build a Brazilian PT-BR focused Releases-Regex variant from upstream sources.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-10-13T06:23:56.195Z",
+  "sources": {
+    "englishRegexes": "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/regexes.json",
+    "englishExpressions": "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/expressions.json",
+    "template": "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/all-templates.json",
+    "dual": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-dual-audio.json",
+    "dubbed": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-dubbed.json",
+    "subtitles": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-subtitles.json",
+    "bad": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-bad.json"
+  },
+  "note": "Group source lists are treated as recognition pools, not quality tiers. Group order is not converted into scores.",
+  "counts": {
+    "englishRegexes": 177,
+    "generatedRegexes": 184,
+    "englishExpressions": 249,
+    "generatedExpressions": 253,
+    "groupsDualAudio": 451,
+    "groupsDubbed": 451,
+    "groupsSubtitles": 451,
+    "uniqueKnownGroups": 451,
+    "groupsSharedAcrossAllThreePools": 451,
+    "badGroups": 4,
+    "regexAdditions": 7,
+    "expressionAdditions": 4
+  },
+  "sourceFileCharacters": {
+    "englishRegexes": 56157,
+    "englishExpressions": 41638,
+    "template": 12794,
+    "dual": 91232,
+    "dubbed": 91478,
+    "subtitles": 91229,
+    "bad": 954
+  },
+  "templateRawBaseUrl": "https://raw.githubusercontent.com/robertmenezes/releases-regex-ptbr/main"
+}
