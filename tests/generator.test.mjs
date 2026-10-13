@@ -74,6 +74,9 @@ test("adds Brazilian variant URLs to the template schema", () => {
   }];
   const changed = updateTemplateForBrazilian(original, "https://raw.githubusercontent.com/example/repo/main")[0];
   assert.equal(changed.metadata.name, "Brazilian Releases Regex");
+  assert.equal(changed.metadata.author, "robertmenezes");
+  assert.equal(changed.metadata.version, "0.1.1");
+  assert.ok(changed.metadata.author.length <= 20, "AIOStreams limits metadata.author to 20 characters");
   assert.ok(changed.metadata.inputs[0].options.some((option) => option.value === "brazilian"));
   assert.deepEqual(changed.config.syncedRankedRegexUrls.cases.brazilian, ["https://raw.githubusercontent.com/example/repo/main/Brazilian/regexes.json"]);
   assert.deepEqual(changed.config.syncedRankedStreamExpressionUrls.cases.brazilian, ["https://raw.githubusercontent.com/example/repo/main/Brazilian/expressions.json"]);
