@@ -17,6 +17,10 @@ Na branch `stable` consultada, cada uma das três listas (`dual-audio`, `dubbed`
 
 As expressões para o conjunto reconhecido e para os marcadores são neutras (score `0`) nesta versão inicial; isso mantém os nomes visíveis para depuração sem alterar a ordenação. Os quatro grupos de `Brazilian Group Tier Bad` recebem `-35000`, seguindo a escala de penalidade usada pela base English para grupos de baixa qualidade. Essa escolha deve ser revista com testes e preferência pessoal antes de ser considerada definitiva.
 
+### English rules intentionally not inherited
+
+The Brazilian variant omits the upstream English `Radarr Bad Dual Groups` and `Sonarr Bad Dual Groups` patterns and their `Bad Dual` ranked expressions. Those rules penalize a specific audio-track/language-ordering behavior; they are not general quality tiers for groups such as BiOMA or CYPHER. The Brazilian variant instead uses the four groups explicitly listed by TRaSH Guides PT-BR as problematic.
+
 ## Requisitos
 
 - Node.js 20 ou superior.
