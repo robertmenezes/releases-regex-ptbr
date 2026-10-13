@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T06:23:56.195Z",
+  "generatedAt": "2026-10-13T06:57:47.760Z",
   "sources": {
     "englishRegexes": "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/regexes.json",
     "englishExpressions": "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/expressions.json",
@@ -9,12 +9,12 @@
     "subtitles": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-subtitles.json",
     "bad": "https://raw.githubusercontent.com/marcosviniciusi/trash-guides-ptbr/stable/custom-formats/custom-brazilian-group-tier-bad.json"
   },
-  "note": "Group source lists are treated as recognition pools, not quality tiers. Group order is not converted into scores.",
+  "note": "Group source lists are treated as recognition pools, not quality tiers. Group order is not converted into scores. English `Radarr Bad Dual Groups` and `Sonarr Bad Dual Groups` regexes/RSEs are excluded from the Brazilian variant because their language-track-ordering assumption is not a general Brazilian release-quality label.",
   "counts": {
     "englishRegexes": 177,
-    "generatedRegexes": 184,
+    "generatedRegexes": 182,
     "englishExpressions": 249,
-    "generatedExpressions": 253,
+    "generatedExpressions": 251,
     "groupsDualAudio": 451,
     "groupsDubbed": 451,
     "groupsSubtitles": 451,
@@ -22,7 +22,9 @@
     "groupsSharedAcrossAllThreePools": 451,
     "badGroups": 4,
     "regexAdditions": 7,
-    "expressionAdditions": 4
+    "expressionAdditions": 4,
+    "removedEnglishBadDualRegexes": 2,
+    "removedEnglishBadDualExpressions": 2
   },
   "sourceFileCharacters": {
     "englishRegexes": 56157,
