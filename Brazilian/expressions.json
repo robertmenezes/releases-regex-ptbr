@@ -1175,16 +1175,6 @@
     "enabled": true
   },
   {
-    "expression": "/*#Radarr*/ /*Bad Dual*/ queryType=='movie' ? regexMatched(streams, 'Radarr Bad Dual Groups') : []",
-    "score": -10000,
-    "enabled": true
-  },
-  {
-    "expression": "/*#Sonarr*/ /*Bad Dual*/ queryType=='series' ? regexMatched(streams, 'Sonarr Bad Dual Groups') : []",
-    "score": -10000,
-    "enabled": true
-  },
-  {
     "expression": "/*#Radarr*/ /*Obfuscated*/ queryType=='movie' ? regexMatched(streams, 'Obfuscated (Radarr)') : []",
     "score": -1,
     "enabled": true
