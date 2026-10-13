@@ -62,3 +62,7 @@ Os repositórios upstream consultados não apresentavam um arquivo de licença n
 ## Escopo desta primeira versão
 
 A finalidade é uma base reproduzível e compatível com o formato existente, não uma pontuação final de qualidade brasileira. O passo seguinte deve definir se os grupos reconhecidos serão todos equivalentes ou se haverá tiers manuais fundamentados em critérios e releases de teste.
+
+## AIOStreams URL access
+
+Some hosted AIOStreams instances restrict synced regex and stream-expression URLs to an administrator-managed allowlist. If saving a config reports `Forbidden URL(s) in regex configuration`, the repository URL may be valid but not authorized by that instance. Ask the instance administrator to allow the Brazilian `regexes.json` URL; the `expressions.json` URL may also need authorization under the separate stream-expression sync policy. On a hosted instance where you cannot change that policy, use a host that permits the sources or ask its administrator for access.
