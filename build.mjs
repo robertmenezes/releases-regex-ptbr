@@ -80,8 +80,15 @@ async function main() {
 
   const headerRegexName = "Brazilian Releases Regexes (synced)";
   const headerExpressionName = "Brazilian Releases Ranked Stream Expressions (synced)";
-  const regexes = replaceRegexHeader(englishRegexes, headerRegexName);
-  const expressions = replaceExpressionHeader(englishExpressions, headerExpressionName);
+
+  // These two English RSE rules penalize "Bad Dual" groups for language-track
+  // ordering. They are not general release-quality tiers, and the Brazilian
+  // variant should not inherit that assumption without Brazilian-specific evidence.
+  const badDualRegexNames = new Set(["Radarr Bad Dual Groups", "Sonarr Bad Dual Groups"]);
+  const regexes = replaceRegexHeader(englishRegexes, headerRegexName)
+    .filter((item, index) => index === 0 || !badDualRegexNames.has(item.name));
+  const expressions = replaceExpressionHeader(englishExpressions, headerExpressionName)
+    .filter((item, index) => index === 0 || !item.expression.includes("/*Bad Dual*/"));
 
   const additions = [
     makeRegexAddition("Brazilian Known Groups", combineGroupPatterns(allGroups)),
@@ -144,6 +151,8 @@ async function main() {
       badGroups: groupNameSets.bad.size,
       regexAdditions: additions.length,
       expressionAdditions: expressionAdditions.length,
+      removedEnglishBadDualRegexes: englishRegexes.filter((item) => badDualRegexNames.has(item.name)).length,
+      removedEnglishBadDualExpressions: englishExpressions.filter((item) => item.expression.includes("/*Bad Dual*/")).length,
     },
     sourceFileCharacters: Object.fromEntries(Object.entries(fetched).map(([key, value]) => [key, value.chars])),
     templateRawBaseUrl: rawBaseUrl,
