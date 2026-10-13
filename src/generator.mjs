@@ -136,7 +136,7 @@ export function updateTemplateForBrazilian(templateList, rawBaseUrl) {
   template.metadata.id = "brazilian-releases-regex.template";
   template.metadata.name = "Brazilian Releases Regex";
   template.metadata.author = "robertmenezes";
-  template.metadata.version = "0.1.1";
+  template.metadata.version = "0.1.2";
   template.metadata.description = "PT-BR-focused variant of Releases-Regex, using English scoring as a base and group data from TRaSH Guides PT-BR. Recognizes Brazilian release groups and PT-BR tags. This initial version does not infer quality tiers from group list order. Requires Stream Expression Score in sort order.";
 
   const creditsInput = template.metadata.inputs?.find((item) => item.id === "credits");
